@@ -3,7 +3,7 @@ Feature: Adding item in YoKart website
   @demo
   Scenario Outline: Adding item in YoKart website
     Given launch "YoKart" application
-    When user click on "Sign In"
+    When user click on "Sign In" button
     Then verify user is logged in
     And Navigate to Product Catalog
     And Search "<product>"
