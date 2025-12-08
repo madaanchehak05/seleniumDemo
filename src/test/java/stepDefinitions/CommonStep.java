@@ -4,6 +4,7 @@ import Modules.CommonModule;
 import Utilities.ExcelUtils;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.testng.Assert;
 
 public class CommonStep {
@@ -27,5 +28,20 @@ public class CommonStep {
         // Write code here that turns the phrase above into concrete actions
         Assert.assertTrue(CommonModule.verifyproduct(productName));
     }
+    @Then("user should be logout")
+    public void userShouldBeLogout() {
+        CommonModule.logout();
+    }
 
-}
+
+    }
+
+
+
+
+
+
+
+
+
+

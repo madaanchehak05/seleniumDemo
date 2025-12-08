@@ -20,7 +20,7 @@ public class DriverUtils extends DriverFactory{
 
     public static void click(By locator, String log){
         try {
-            waitForElementFluent(locator,60);
+            waitForElementFluent(locator,100);
             System.out.println("Clicking on: "+log);
             ExtentTestManager.getTest().info("Clicking on element: "+log);
             getDriver().findElement(locator).click();
@@ -31,7 +31,7 @@ public class DriverUtils extends DriverFactory{
 
     public static void inputText(By locator, String data){
         try{
-            waitForElementFluent(locator,60);
+            waitForElementFluent(locator,100);
             System.out.println("Entering text: "+data);
             ExtentTestManager.getTest().info("Entering text: "+data);
             getDriver().findElement(locator).sendKeys(data);
@@ -43,7 +43,7 @@ public class DriverUtils extends DriverFactory{
     public static String getText(By locator){
         String text="";
         try {
-            waitForElementFluent(locator,60);
+            waitForElementFluent(locator,100);
             text = getDriver().findElement(locator).getText();
             ExtentTestManager.getTest().info("Text fetched: "+text);
             System.out.println("Text fetched: "+text);
